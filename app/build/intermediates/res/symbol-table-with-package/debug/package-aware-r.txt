@@ -996,6 +996,7 @@ drawable abc_vector_test
 drawable add_image
 drawable avd_hide_password
 drawable avd_show_password
+drawable blogs_pe
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1185,6 +1186,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id splashscreen
 id split_action_bar
 id spread
 id spread_inside
@@ -1281,6 +1283,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login_screen
 layout activity_main
+layout activity_splash
 layout content_main
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
