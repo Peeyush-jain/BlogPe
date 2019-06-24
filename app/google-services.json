@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "9545986006",
+    "firebase_url": "https://blogpefirebase.firebaseio.com",
+    "project_id": "blogpefirebase",
+    "storage_bucket": "blogpefirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9545986006:android:2b1db1d0b1e07c8b",
+        "android_client_info": {
+          "package_name": "com.example.blogpe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9545986006-parvcvi6glcoscsrpl3b9is4m3evib8q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDia3klPief2wgaxNv0CkHnkWYlbjdgij8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9545986006-parvcvi6glcoscsrpl3b9is4m3evib8q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

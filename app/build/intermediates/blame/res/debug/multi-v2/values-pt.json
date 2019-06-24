@@ -4,7 +4,7 @@
             "outputFile": "/Users/rahul.banerjee/BlogPe/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/f6aa2cb30ea4c7ca304c931eea817750/res/values-pt/values-pt.xml",
+                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/3e6f28a7d85baafada3c89e5488de511/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/016292af3b47b202c5de1f8305d5bdb9/res/values-pt/values-pt.xml",
+                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/ec9e773f6072f0fda8d32bcd51c7ead7/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

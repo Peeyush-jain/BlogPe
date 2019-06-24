@@ -1,11 +1,10 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
         applicationId "com.example.blogpe"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -27,4 +26,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+    //Firebase database
+    implementation 'com.google.firebase:firebase-database:17.0.0'
+    //Firebase storage
+    implementation 'com.google.firebase:firebase-storage:17.0.0'
 }
+
+//Firebase
+apply plugin: 'com.google.gms.google-services'

@@ -4,7 +4,17 @@
             "outputFile": "/Users/rahul.banerjee/BlogPe/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/af4047c322109b77540f3ebf2a35c6a3/res/values-land/values-land.xml",
+                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/3e6f28a7d85baafada3c89e5488de511/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/96ab2befaa651dd48c8a2da210d847f6/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "8",
                         "endColumns": "10",
                         "endOffsets": "431"
-                    }
-                },
-                {
-                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/f6aa2cb30ea4c7ca304c931eea817750/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,125,196",
-                        "endColumns": "69,70,67",
-                        "endOffsets": "120,191,259"
                     }
                 }
             ]

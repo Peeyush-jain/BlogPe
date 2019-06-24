@@ -1,4 +1,5 @@
 package com.example.blogpe;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -10,13 +11,31 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.util.UUID;
+
+import Models.Post;
 
 public class LoginScreen extends AppCompatActivity {
 
     private ImageButton pickImageButton;
     private static int REQUEST_CODE = 1;
     private static int PReqCode = 1;
+    private static EditText titleText;
+    private static EditText authorName;
+    private static EditText content;
+    private static Button postButton;
     Uri pickedImageUri;
 
     @Override
@@ -39,6 +58,78 @@ public class LoginScreen extends AppCompatActivity {
                 }
             }
         });
+
+
+        //Init
+        postButton = findViewById(R.id.publishButton);
+        titleText = findViewById(R.id.titleText);
+        authorName = findViewById(R.id.authorName);
+        content = findViewById(R.id.contentBox);
+
+
+        postButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!titleText.getText().toString().isEmpty()
+                        && !authorName.getText().toString().isEmpty()
+                        && pickedImageUri != null
+                        && !content.getText().toString().isEmpty()) {
+
+                    //Upload image to firebase
+                    StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("blog_images");
+                    final StorageReference imageFilePath = storageReference.child(pickedImageUri.getLastPathSegment());
+
+                    imageFilePath.putFile(pickedImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    String imageDownloadLink = uri.toString();
+
+                                    //Create post object
+                                    Post post = new Post(titleText.getText().toString(),
+                                            content.getText().toString(),
+                                            56,
+                                            imageDownloadLink, authorName.getText().toString());
+
+                                    //Add post to firebase database
+                                    addPost(post);
+
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    //In case of error in uploading image
+                                    showMessage(e.getMessage());
+                                }
+                            });
+                        }
+                    });
+                }
+                else {
+                    showMessage("Please fill every field");
+                }
+            }
+        });
+    }
+
+    private void addPost(Post post) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("blogpefirebase").push();
+
+        //Add post data to firebase database
+        myRef.setValue(post).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                showMessage("Post added successfully");
+            }
+        });
+
+    }
+
+    private void showMessage(String message) {
+        Toast.makeText(LoginScreen.this, message, Toast.LENGTH_SHORT).show();
     }
 
     private void openGallery() {

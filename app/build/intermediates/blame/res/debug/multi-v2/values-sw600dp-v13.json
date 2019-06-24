@@ -4,7 +4,7 @@
             "outputFile": "/Users/rahul.banerjee/BlogPe/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/f6aa2cb30ea4c7ca304c931eea817750/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/3e6f28a7d85baafada3c89e5488de511/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/af4047c322109b77540f3ebf2a35c6a3/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/rahul.banerjee/.gradle/caches/transforms-2/files-2.1/96ab2befaa651dd48c8a2da210d847f6/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
